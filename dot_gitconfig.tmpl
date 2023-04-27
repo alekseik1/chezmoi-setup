@@ -1,52 +1,52 @@
 [core]
-	editor = vim
-	filemode = true
-	autocrlf = input
+    editor = vim
+    filemode = true
+    autocrlf = input
 [user]
     email = 1alekseik1@gmail.com
     name = alekseik1
-    {{- /* If git_gpg_key is set as variable, use it as key */ -}}
+{{- /* If git_gpg_key is set as variable, use it as key */ -}}
 {{ if hasKey . "git_gpg_key" }}
-	signingkey = {{ .git_gpg_key }}
+    signingkey = {{ .git_gpg_key }}
 {{ end }}
 [help]
-	autocorrect = 1
+    autocorrect = 1
 [color]
-	ui = true
+    ui = true
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+    tool = vimdiff
+    conflictstyle = diff3
 [mergetool]
-	prompt = true
+    prompt = true
 [difftool]
-	prompt = false
+    prompt = false
 [mergetool ""]
-	prompt = false
+    prompt = false
 [alias]
-	d = difftool
+    d = difftool
     st = status
     br = branch
     ci = commit
     co = checkout
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	make-changelog = log --pretty=format:\"- %s\"
+    make-changelog = log --pretty=format:\"- %s\"
 [push]
-	default = simple
+    default = simple
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 # Work creds
 [includeIf "gitdir:~/work/"]
     path = ~/.gitconfig.work
 [http]
-	postBuffer = 157286400
+    postBuffer = 157286400
 [pull]
-	rebase = true
+    rebase = true
 {{ if hasKey . "git_gpg_key" }}
 [commit]
-	gpgsign = true
+    gpgsign = true
 {{ end }}
