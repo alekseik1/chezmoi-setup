@@ -1,0 +1,9 @@
+name: Run on Ubuntu
+on: [push]
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sh -c "$(curl -fsLS get.chezmoi.io)"
+      - run: chezmoi init https://github.com/alekseik1/chezmoi-setup.git
+      - run: chezmoi apply
