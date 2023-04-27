@@ -6,9 +6,9 @@
     email = 1alekseik1@gmail.com
     name = alekseik1
     {{- /* If git_gpg_key is set as variable, use it as key */ -}}
-    {{ if hasKey . "git_gpg_key" }}
+{{ if hasKey . "git_gpg_key" }}
 	signingkey = {{ .git_gpg_key }}
-    {{ end }}
+{{ end }}
 [help]
 	autocorrect = 1
 [color]
