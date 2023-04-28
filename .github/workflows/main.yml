@@ -1,9 +1,0 @@
-name: Run on Ubuntu
-on: [push]
-jobs:
-  apply:
-    runs-on: ubuntu-latest
-    steps:
-      - run: sh -c "$(curl -fsLS get.chezmoi.io)"
-      - run: ./bin/chezmoi init https://github.com/alekseik1/chezmoi-setup.git
-      - run: ./bin/chezmoi apply
