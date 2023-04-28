@@ -1,3 +1,8 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
 # omz complains about permissions
 if [ -d "$HOME/.oh-my-zsh" ]; then
     chmod -R g-w,o-w "$HOME/.oh-my-zsh"
