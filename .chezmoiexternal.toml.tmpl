@@ -23,7 +23,8 @@
     exact = true
     stripComponents = 1
 
-{{ if and (stat "/usr/bin/tmux") (lt (output "tmux" "-V") "tmux 2.4") }}
+{{ if stat "/usr/bin/tmux" }}
+{{ if lt (output "tmux" "-V") "tmux 2.4" }}
 [".tmux.conf"]
     type = "file"
     url = "https://raw.githubusercontent.com/alekseik1/chezmoi-setup/master/.tmux.conf.old"
@@ -35,4 +36,5 @@
     stripComponents = 1
     refreshPeriod = "168h"
     include = ["*/.tmux.conf"]
+{{ end }}
 {{ end }}
