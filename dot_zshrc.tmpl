@@ -149,3 +149,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 # Jetbrains
 export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
 {{ end }}
+{{ if eq .chezmoi.os "darwin" }}
+# postgres cask on macOS
+export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
+{{ end }}
