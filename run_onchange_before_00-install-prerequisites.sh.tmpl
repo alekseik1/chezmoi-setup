@@ -22,8 +22,3 @@ fi
 if ! command -v pyenv >/dev/null; then
     curl https://pyenv.run | bash
 fi
-# omz complains about permissions
-if [ -d "$HOME/.oh-my-zsh" ]; then
-    chmod -R g-w,o-w "$HOME/.oh-my-zsh"
-    chmod g-w,o-w "$HOME"
-fi
