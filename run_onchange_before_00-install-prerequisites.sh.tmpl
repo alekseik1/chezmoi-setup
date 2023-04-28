@@ -23,5 +23,5 @@ if ! command -v pyenv >/dev/null; then
     curl https://pyenv.run | bash
 fi
 if [ -d "$HOME/.oh-my-zsh" ]; then
-    chmod -R 744 "$HOME/.oh-my-zsh"
+    compaudit | xargs chmod g-w,o-w
 fi
