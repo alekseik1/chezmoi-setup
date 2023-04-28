@@ -23,7 +23,7 @@
     exact = true
     stripComponents = 1
 
-{{ if stat "/usr/bin/tmux" }}
+{{ if or (stat "/usr/bin/tmux") (stat "/usr/local/bin/tmux") }}
 {{ if lt (output "tmux" "-V") "tmux 2.4" }}
 [".tmux.conf"]
     type = "file"
