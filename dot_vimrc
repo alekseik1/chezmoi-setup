@@ -32,6 +32,15 @@ call plug#begin('~/.vim/plugged')
 " Git integration
 Plug 'tpope/vim-fugitive'
 
+" Treat _ as word delimiter
+Plug 'bkad/CamelCaseMotion'
+let g:camelcasemotion_key = '<leader>'
+" Map to w, b and e mappings
+" map <silent> w <Plug>CamelCaseMotion_w
+" map <silent> b <Plug>CamelCaseMotion_b
+" map <silent> e <Plug>CamelCaseMotion_e
+" map <silent> ge <Plug>CamelCaseMotion_ge
+
 Plug 'itkq/fluentd-vim'
 
 " Surround
