@@ -157,3 +157,6 @@ export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
 # postgres cask on macOS
 export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
 {{ end }}
+
+# added by Nix installer
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then . "$HOME/.nix-profile/etc/profile.d/nix.sh"; fi
