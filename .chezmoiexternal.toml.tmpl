@@ -29,12 +29,13 @@
     type = "file"
     url = "https://raw.githubusercontent.com/alekseik1/chezmoi-setup/master/.tmux.conf.old"
 {{ else }}
-[""]
-    type = "archive"
-    url = "https://github.com/gpakosz/.tmux/archive/fd1bbb56148101f4b286ddafd98f2ac2dcd69cd8.zip"
-    extract = true
-    stripComponents = 1
+[".tmux.conf"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/gpakosz/.tmux/master/.tmux.conf"
     refreshPeriod = "168h"
-    include = ["*/.tmux.conf"]
+[".tmux/plugins/tpm"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tpm"
+    refreshPeriod = "168h"
 {{ end }}
 {{ end }}

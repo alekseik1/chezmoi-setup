@@ -1,0 +1,15 @@
+# Set true color
+set-option -sa terminal-overrides ",xterm*:Tc"
+set -g mouse on
+# copy to external clipboard. Your terminal should support setting clipboard from application
+set -s set-clipboard external
+
+set-window-option -g mode-keys vi
+bind '"' split-window -v -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+run '~/.tmux/plugins/tpm/tpm'
