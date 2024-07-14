@@ -21,7 +21,7 @@ if ! command -v tmux >/dev/null; then
         sudo apt update
         sudo apt install -y git python-is-python3 tmux python3 python3-dev build-essential vim python3-virtualenv curl wget zsh
     {{ else if eq .chezmoi.osRelease.name "Arch Linux" -}}
-        sudo pacman -S git tmux python3 bash-completion zsh-completion vim curl wget zsh
+        sudo pacman -S git tmux python3 bash-completion zsh-completions vim curl wget zsh
         # For pyenv
         sudo pacman -S --needed base-devel openssl zlib xz tk
     {{ end -}}
