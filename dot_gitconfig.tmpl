@@ -39,9 +39,6 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
-# Work creds
-[includeIf "gitdir:~/work/"]
-    path = ~/.gitconfig.work
 [http]
     postBuffer = 157286400
 [pull]
@@ -67,5 +64,5 @@
 [mergetool "nbdime"]
 	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 
-[includeIf "gitdir:~/gid/"]
-    path = .gitconfig.gid
+[includeIf "hasconfig:remote.*.url:git@gitlab.gid.team:*/**"]
+    path = ~/.gitconfig.gid
