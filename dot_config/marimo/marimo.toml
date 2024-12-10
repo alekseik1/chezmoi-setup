@@ -1,0 +1,35 @@
+[save]
+autosave = "after_delay"
+autosave_delay = 1000
+format_on_save = false
+
+[keymap]
+preset = "default"
+
+[keymap.overrides]
+
+[runtime]
+auto_instantiate = false
+auto_reload = "off"
+on_cell_change = "autorun"
+
+[server]
+browser = "default"
+follow_symlink = false
+
+[display]
+theme = "light"
+code_editor_font_size = 14
+cell_output = "above"
+default_width = "medium"
+dataframes = "rich"
+
+[completion]
+activate_on_typing = true
+copilot = false
+
+[package_management]
+manager = "uv"
+
+[formatting]
+line_length = 120
