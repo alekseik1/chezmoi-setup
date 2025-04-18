@@ -1,9 +1,14 @@
 {
- "builder": {
-  "gc": {
-   "defaultKeepStorage": "20GB",
-   "enabled": true
-  }
- },
- "experimental": false
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "default-network-opts": {
+    "bridge": {
+      "com.docker.network.bridge.gateway_mode_ipv4": "nat-unprotected"
+    }
+  },
+  "experimental": false
 }
