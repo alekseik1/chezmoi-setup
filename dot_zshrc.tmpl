@@ -154,6 +154,8 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 {{ if eq .chezmoi.os "linux" }}
 # Jetbrains
 export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
+# Snap packages
+export PATH="/snap/bin:$PATH"
 {{ end }}
 {{ if eq .chezmoi.os "darwin" }}
 # postgres cask on macOS
