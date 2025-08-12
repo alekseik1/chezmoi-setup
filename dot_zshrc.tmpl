@@ -184,3 +184,10 @@ if [ -f "$HOME/yandex-cloud/completion.zsh.inc" ]; then source "$HOME/yandex-clo
 {{ if eq .chezmoi.os "darwin" }}
 source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
 {{ end }}
+
+# save history for long
+setopt append_history
+setopt inc_append_history
+setopt share_history
+export HISTSIZE=50000
+export SAVEHIST=50000
