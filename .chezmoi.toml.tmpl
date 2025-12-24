@@ -1,12 +1,8 @@
 {{ $passphrase := promptStringOnce . "passphrase" "passphrase" }}
-{{ $isYandexMachine := promptBoolOnce . "isYandexMachine" "Is this a Yandex dev machine" }}
-{{ $git_gpg_key := promptStringOnce . "git_gpg_key" "Git GPG key" -}}
 
 encryption = "gpg"
 [data]
     passphrase = {{ $passphrase | quote }}
-    isYandexMachine = {{ $isYandexMachine }}
-    git_gpg_key = {{ $git_gpg_key | quote }}
 [gpg]
     symmetric = true
     args = ["--batch", "--passphrase", {{ $passphrase | quote }}, "--no-symkey-cache"]

@@ -7,10 +7,6 @@
 [user]
     email = 1alekseik1@gmail.com
     name = alekseik1
-{{- /* If git_gpg_key is set as variable, use it as key */ -}}
-{{ if ne (get . "git_gpg_key") "" }}
-    signingkey = {{ .git_gpg_key }}
-{{ end }}
 [help]
     autocorrect = 1
 [color]
@@ -45,15 +41,6 @@
     postBuffer = 157286400
 [pull]
     rebase = true
-{{ if ne (get . "git_gpg_key") "" }}
-[gpg]
-    program = /usr/local/bin/gpg
-[commit]
-    gpgsign = true
-[tag]
-    forceSignAnnotated = true
-{{ end }}
-
 [init]
     defaultBranch = main
 [diff "jupyternotebook"]
