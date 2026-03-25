@@ -1,3 +1,10 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/Users/aleksei/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -202,3 +209,8 @@ setopt inc_append_history
 setopt share_history
 export HISTSIZE=50000
 export SAVEHIST=50000
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/aleksei/.lmstudio/bin"
+# End of LM Studio CLI section
+
