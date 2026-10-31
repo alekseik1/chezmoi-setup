@@ -34,9 +34,7 @@
     type = "file"
     url = "https://raw.githubusercontent.com/gpakosz/.tmux/master/.tmux.conf"
     refreshPeriod = "168h"
-[".tmux/plugins/tpm"]
-    type = "git-repo"
-    url = "https://github.com/tmux-plugins/tpm"
-    refreshPeriod = "168h"
+# Oh my tmux! installs, updates, and patches TPM itself.
+# Managing TPM here as a git-repo external conflicts with those patches.
 {{ end }}
 {{ end }}
